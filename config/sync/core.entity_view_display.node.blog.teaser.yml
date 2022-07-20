@@ -1,19 +1,17 @@
-uuid: 4399840c-78ca-4ced-9284-6f02d43e5371
+uuid: 7c63e272-4f25-4738-a9a8-2362eaa4f4ad
 langcode: en
 status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
-    - field.field.node.page.body
-    - node.type.page
+    - field.field.node.blog.body
+    - node.type.blog
   module:
     - text
     - user
-_core:
-  default_config_hash: 8BgdRtLbtQ0F__o0FHSH0Mx5fvXOra9tfT1GmNKbRYw
-id: node.page.teaser
+id: node.blog.teaser
 targetEntityType: node
-bundle: page
+bundle: blog
 mode: teaser
 content:
   body:
@@ -22,9 +20,11 @@ content:
     settings:
       trim_length: 600
     third_party_settings: {  }
-    weight: 100
+    weight: 101
     region: content
   links:
-    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
     region: content
 hidden: {  }

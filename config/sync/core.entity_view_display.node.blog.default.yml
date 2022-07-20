@@ -1,18 +1,16 @@
-uuid: 7b6488cf-1c1c-4b99-b6e5-d4bad081fdd6
+uuid: 605faba1-b1c5-4dea-99c1-70ef2b043252
 langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.page.body
-    - node.type.page
+    - field.field.node.blog.body
+    - node.type.blog
   module:
     - text
     - user
-_core:
-  default_config_hash: M_Y8L5tfmhx7DR143E05YyZSpvgil6VFvqcfBWykalg
-id: node.page.default
+id: node.blog.default
 targetEntityType: node
-bundle: page
+bundle: blog
 mode: default
 content:
   body:
@@ -20,9 +18,11 @@ content:
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 100
+    weight: 101
     region: content
   links:
-    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
     region: content
 hidden: {  }
