@@ -1,0 +1,37 @@
+uuid: 812ff751-8bb6-4c79-92bc-c91cbaca3148
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_image_content
+    - node.type.blogs
+    - paragraphs.paragraphs_type.content
+    - paragraphs.paragraphs_type.image
+  module:
+    - entity_reference_revisions
+id: node.blogs.field_image_content
+field_name: field_image_content
+entity_type: node
+bundle: blogs
+label: 'Image / Content'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      content: content
+      image: image
+    negate: 0
+    target_bundles_drag_drop:
+      content:
+        weight: 3
+        enabled: true
+      image:
+        weight: 4
+        enabled: true
+field_type: entity_reference_revisions
+
