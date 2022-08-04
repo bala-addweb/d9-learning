@@ -1,11 +1,11 @@
-uuid: 812ff751-8bb6-4c79-92bc-c91cbaca3148
+uuid: 69aa58b3-9542-4865-8f54-5d2076cfca46
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.node.field_image_content
     - node.type.blogs
-    - paragraphs.paragraphs_type.content
+    - paragraphs.paragraphs_type.description
     - paragraphs.paragraphs_type.image
   module:
     - entity_reference_revisions
@@ -13,7 +13,7 @@ id: node.blogs.field_image_content
 field_name: field_image_content
 entity_type: node
 bundle: blogs
-label: 'Image / Content'
+label: Image+content
 description: ''
 required: false
 translatable: false
@@ -23,15 +23,14 @@ settings:
   handler: 'default:paragraph'
   handler_settings:
     target_bundles:
-      content: content
       image: image
+      description: description
     negate: 0
     target_bundles_drag_drop:
-      content:
+      description:
         weight: 3
         enabled: true
       image:
-        weight: 4
+        weight: 2
         enabled: true
 field_type: entity_reference_revisions
-
