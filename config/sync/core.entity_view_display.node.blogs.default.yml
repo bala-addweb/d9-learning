@@ -1,0 +1,32 @@
+uuid: c63a14ca-4078-46d2-8efe-32db697fc71e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.blogs.body
+    - field.field.node.blogs.field_image_content
+    - node.type.blogs
+  module:
+    - entity_reference_revisions
+    - user
+id: node.blogs.default
+targetEntityType: node
+bundle: blogs
+mode: default
+content:
+  field_image_content:
+    type: entity_reference_revisions_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  body: true
