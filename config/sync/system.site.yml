@@ -1,10 +1,13 @@
 _core: null
 langcode: en
 uuid: a7894040-97cc-491b-94ee-34a6624f6d1a
-name: 'Drush Site-Install'
-mail: admin@example.com
-slogan: ''
-page: null
+name: 'Royal Literary'
+mail: bala@addwebsolution.in
+slogan: 'SpReAd the Knowledge'
+page:
+  403: ''
+  404: ''
+  front: /node
 admin_compact_mode: false
 weight_select_max: 100
 default_langcode: en
