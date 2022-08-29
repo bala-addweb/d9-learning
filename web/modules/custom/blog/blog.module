@@ -1,0 +1,24 @@
+<?php
+use Drupal\Core\Form\FormStateInterface;
+
+/**
+ * Implements hook_form_alter().
+ */
+function blog_form_alter(&$form, FormStateInterface &$form_state, &$form_id) { 
+  // TO unset text_link for comment_comment_form.
+  if ($form_id == 'comment_comment_form'){
+    $form['comment_body']['widget']['#after_build'][] = '_allowed_formats_remove_textarea_help';
+  }
+}
+
+function _allowed_formats_remove_textarea_help(&$form_element, FormStateInterface $form_state) {
+  if (isset($form_element[0]['format'])) {
+    // Remove Guidelines and Help text.
+    unset($form_element[0]['format']['guidelines']);
+    unset($form_element[0]['format']['help']);
+    unset($form_element[0]['format']['#type']);
+    unset($form_element[0]['format']['#theme_wrappers']);
+    $form_element[0]['format']['format']['#access'] = FALSE;
+  }
+  return $form_element;
+}
