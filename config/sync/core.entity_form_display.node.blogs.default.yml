@@ -4,9 +4,11 @@ status: true
 dependencies:
   config:
     - field.field.node.blogs.body
+    - field.field.node.blogs.field_comment
     - field.field.node.blogs.field_image_content
     - node.type.blogs
   module:
+    - comment
     - paragraphs
     - path
     - text
@@ -28,6 +30,12 @@ content:
   created:
     type: datetime_timestamp
     weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_comment:
+    type: comment_default
+    weight: 26
     region: content
     settings: {  }
     third_party_settings: {  }

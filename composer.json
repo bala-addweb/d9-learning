@@ -22,6 +22,7 @@
         "drupal/core-composer-scaffold": "^9.4",
         "drupal/core-project-message": "^9.4",
         "drupal/core-recommended": "^9.4",
+        "drupal/devel": "^4.1",
         "drupal/paragraphs": "^1.14",
         "drush/drush": "^11.1"
     },
