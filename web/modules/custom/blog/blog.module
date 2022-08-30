@@ -19,4 +19,4 @@ function _allowed_formats_remove_textarea_help($form_element, FormStateInterface
         $form_element[0]['format']['format']['#access'] = FALSE;
       }
   return $form_element;
-    }
+}
