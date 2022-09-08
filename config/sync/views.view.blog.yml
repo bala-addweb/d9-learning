@@ -81,7 +81,7 @@ display:
           group_type: group
           admin_label: ''
           plugin_id: field
-          label: Body
+          label: Description
           exclude: false
           alter:
             alter_text: false
@@ -243,10 +243,11 @@ display:
         - 'config:field.storage.node.body'
   page_1:
     id: page_1
-    display_title: Page
+    display_title: Blog
     display_plugin: page
     position: 1
     display_options:
+      display_description: ''
       display_extenders: {  }
       path: blog
       menu:
