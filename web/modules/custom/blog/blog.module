@@ -10,13 +10,13 @@ function blog_form_alter(&$form, &$form_state, &$form_id) {
   }
 }
 function _allowed_formats_remove_textarea_help($form_element, FormStateInterface $form_state) {
-    if (isset($form_element[0]['format'])) {
-        // All this stuff is needed to hide the help text.
-        unset($form_element[0]['format']['guidelines']);
-        unset($form_element[0]['format']['help']);
-        unset($form_element[0]['format']['#type']);
-        unset($form_element[0]['format']['#theme_wrappers']);
-        $form_element[0]['format']['format']['#access'] = FALSE;
-      }
+  if (isset($form_element[0]['format'])) {
+    // All this stuff is needed to hide the help text.
+    unset($form_element[0]['format']['guidelines']);
+    unset($form_element[0]['format']['help']);
+    unset($form_element[0]['format']['#type']);
+    unset($form_element[0]['format']['#theme_wrappers']);
+    $form_element[0]['format']['format']['#access'] = FALSE;
+  }
   return $form_element;
 }
